@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.maxtrain.prs.capstone.product.Product;
 import com.maxtrain.prs.capstone.request.Request;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -41,6 +40,9 @@ public class Requestline {
 	}
 
 	public void setQuantity(int quantity) {
+		if(quantity < 1) {
+			throw new IllegalArgumentException();
+		}
 		this.quantity = quantity;
 	}
 
@@ -61,4 +63,6 @@ public class Requestline {
 	}
 
 	public Requestline() {}
+
+	
 }
