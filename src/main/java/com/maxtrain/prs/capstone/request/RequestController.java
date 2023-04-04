@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/requests")
 public class RequestController {
-	private final String Status_New = "NEW";
+//	private final String Status_New = "NEW";
 	private final String Status_Review = "REVIEW";
 	private final String Status_Approved = "APPROVED";
 	private final String Status_Rejected = "REJECTED";
